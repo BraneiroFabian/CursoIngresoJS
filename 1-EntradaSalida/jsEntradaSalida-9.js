@@ -13,7 +13,7 @@ function mostrarAumento()
 	importe=document.getElementById('sueldo').value;
 	importe=parseInt(importe);
 	aumento=importe*porcentaje/100;
-	resultado=importe+porcentaje;
+	resultado=importe+aumento;
 
 	document.getElementById('resultado').value=resultado;
 

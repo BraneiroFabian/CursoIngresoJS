@@ -39,6 +39,11 @@ function restar()
 
 function multiplicar()
 {
+	var primerNumero;
+	var segundoNumero;
+	var multiplicar;
+
+
 	primerNumero=document.getElementById('numeroUno').value;
 	primerNumero=parseInt(primerNumero);
 	console.log(primerNumero);
@@ -58,6 +63,10 @@ function multiplicar()
 
 function dividir()
 {
+	var primerNumero;
+	var segundoNumero;
+	var dividir;
+	
 	primerNumero=document.getElementById('numeroUno').value;
 	primerNumero=parseInt(primerNumero);
 	console.log(primerNumero);

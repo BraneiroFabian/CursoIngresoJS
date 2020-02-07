@@ -16,6 +16,6 @@ function sumar()
 	console.log(segundoNumero);
 	
 	suma=primerNumero+segundoNumero
-	alert(suma)
+	alert("La suma es "+ suma);
 }
 

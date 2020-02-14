@@ -1,6 +1,7 @@
 function mostrar()
 {
 	var edad;
+	var estadoCivil;
  	//tomo la edad
 	edad=document.getElementById('edad').value;
 	edad=parseInt(edad);  

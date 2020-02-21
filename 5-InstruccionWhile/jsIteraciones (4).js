@@ -12,6 +12,11 @@ function mostrar()
 	{
 		numero = prompt("Re,ingrese un número entre 0 y 10");
 		numero=parseInt(numero);
+		while(isNaN(numeroIngresado))
+			{
+				numeroIngresado=prompt("Error, solo numeros pa");
+				numeroIngresado=parseInt(numeroIngresado);
+			}
 	}
 
 

@@ -7,6 +7,11 @@ function mostrar()
 	{
 		console.log(contador);
 		contador=contador+1;
+		while(isNaN(numeroIngresado))
+			{
+				numeroIngresado=prompt("Error, solo numeros pa");
+				numeroIngresado=parseInt(numeroIngresado);
+			}
 	}
 	
 

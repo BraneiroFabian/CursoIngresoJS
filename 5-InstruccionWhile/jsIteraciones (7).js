@@ -1,27 +1,29 @@
 function mostrar()
 {
 
-	var contador=0;
-	var acumulador=0;
-	var respuesta='si';
+	var contador;
+	contador=0;
+	var acumulador;
+	acumulador=0;
+	var respuesta; 
+	respuesta='si';
 	var numeroIngresado;
 
-
-	while(respuesta=='si')
-	{		
-			contador++;
-			numeroIngresado=prompt("Ingrese numero");
+	while(respuesta!="terminar")
+	{
+		contador=contador+1;
+		numeroIngresado=prompt("Ingrese un numero");
+		numeroIngresado=parseInt(numeroIngresado);
+		while(isNaN(numeroIngresado))
+		{
+			numeroIngresado=prompt("Papi solo numeros");
 			numeroIngresado=parseInt(numeroIngresado);
-			while(isNaN(numeroIngresado))
-			{
-				numeroIngresado=prompt("Error, solo numeros pa");
-				numeroIngresado=parseInt(numeroIngresado);
-			}
+		}
+		acumulador=acumulador+numeroIngresado;
+		respuesta=prompt("Si desea terminar el programa escriba terminar");
 
-			acumulador=numeroIngresado+acumulador;
-			respuesta=prompt("Ingrese si para continuar");
 	}
-
+	alert(acumulador);
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;

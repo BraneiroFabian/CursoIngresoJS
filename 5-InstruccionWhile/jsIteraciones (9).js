@@ -5,13 +5,14 @@ function mostrar()
 	var numeroIngresado;
 	var elMaximo;
 	var elMinimo;
+	var acumulador=0;
 	// declarar variables
 	
 	var respuesta='si';
 	
 	elMinimo=parseInt(elMinimo);
 	elMaximo=parseInt(elMaximo);
-	elMinimo=elMinimo+numeroIngresado;
+	
 	elMaximo=elMaximo+numeroIngresado;
 	while(respuesta!='no')
 	{
@@ -23,15 +24,16 @@ function mostrar()
 				numeroIngresado=prompt("Error, solo numeros pa");
 				numeroIngresado=parseInt(numeroIngresado);
 			}
-			if (elMaximo<numeroIngresado); 
+			if (elMaximo>numeroIngresado); 
 			{
 				elMaximo=numeroIngresado;
 			}
-			if (elMinimo>numeroIngresado) 
+			if (elMinimo<numeroIngresado) 
 			{
+				elMinimo=elMinimo+numeroIngresado;
 				elMinimo=numeroIngresado;
 			}
-
+	acumulador=numeroIngresado+acumulador;		
 	respuesta=prompt("Ingrese si para continuar");
 	}
 

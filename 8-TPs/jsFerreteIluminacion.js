@@ -11,50 +11,68 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
 function CalcularPrecio () 
 {
-	var cantidadL;
-	var precioL;
-	var precioDesc;
-	var descuento;
-	var precioFinal;
-	var precioBruto;
-	var marca;
+	var Clampara;
+    var Punidad;
+    var Pbruto;
+    var Vfinal;
+    var descuento; 
+    var marca;
+      
 
-	marca=document.getElementById('Marca').value;
-	precioL=35;
-	cantidadL=document.getElementById('Cantidad').value;
-	cantidadL=parseInt(cantidadL);
-	if (cantidadL>5) 
-	{ 
-		precioBruto=cantidadL*precioL;
-		descuento=precioBruto*50/100;
-		precioDesc=precioBruto-descuento;
-		document.getElementById('precioDescuento').value=precioDesc;
-		
+      Clampara = document.getElementById("Cantidad").value;
+      marca = document.getElementById("Marca").value;
+      
+      Punidad = 35
 
-	}
+      descuento = 0 
 
-	if (cantidadL==5 && marca=="ArgentinaLuz") 
-	{
+      if (Clampara>5)
+      {
+       descuento = 50  
+      }
+        else 
+        {
+          if ( Clampara == 5 )
+          {
+            if (marca == "ArgentinaLuz")
+            {
+              descuento = 40
+            }
+              else 
+              {  
+                descuento= 30
+              }
+              
+          }
+           else 
+            {
+              if (Clampara == 4 && marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+              {
+                descuento = 25
+              }
+                else
+                {
+                  descuento = 20
+                }
 
-		precioBruto=cantidadL*precioL;
-		descuento=precioBruto*40/100;
-		precioDesc=precioBruto-descuento;
-		document.getElementById('precioDescuento').value=precioDesc;
-
-	}	else	
-		{
-			precioBruto=cantidadL*precioL;
-			descuento=precioBruto*30/100;
-			precioDesc=precioBruto-descuento;
-			document.getElementById('precioDescuento').value=precioDesc;
-		}
-
-
-
-
-
-
-
-
-
-	}
+            }
+              if (Clampara==3 && marca == "ArgentinaLuz")
+              {
+                descuento = 15
+              }
+                else 
+                {
+                  if ( marca== "FelipeLamparas") 
+                  {
+                    descuento = 10
+                  }
+                    else 
+                    {
+                      descuento = 5
+                    }
+              }
+        }
+        Pbruto = parseInt(Pbruto)
+        Pbruto = Clampara*Punidad;
+    Vfinal = Pbruto-Pbruto*descuento/100;
+    document.getElementById("precioDescuento").value = Vfinal ;

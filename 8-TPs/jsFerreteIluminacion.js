@@ -74,5 +74,5 @@ function CalcularPrecio ()
         }
         Pbruto = parseInt(Pbruto)
         Pbruto = Clampara*Punidad;
-    Vfinal = Pbruto-Pbruto*descuento/100;
-    document.getElementById("precioDescuento").value = Vfinal ;
+        Vfinal = Pbruto-Pbruto*descuento/100;
+        document.getElementById("precioDescuento").value = Vfinal ;
